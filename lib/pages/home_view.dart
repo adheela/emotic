@@ -1,6 +1,6 @@
 import 'package:emotic/const/button.dart';
 import 'package:emotic/const/color.dart';
-import 'package:emotic/home/analysis_query.dart';
+import 'package:emotic/pages/analysis_query.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {

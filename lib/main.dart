@@ -1,5 +1,4 @@
-import 'package:emotic/home/analysis_query.dart';
-import 'package:emotic/home/home_view.dart';
+import 'package:emotic/pages/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
