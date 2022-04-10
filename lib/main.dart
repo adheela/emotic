@@ -1,4 +1,5 @@
 import 'package:emotic/pages/home_view.dart';
+import 'package:emotic/pages/report.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      home: Report(),
     );
   }
 }
