@@ -1,7 +1,9 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:emotic/components/piechart.dart';
 import 'package:emotic/components/popular.dart';
 import 'package:emotic/components/predominant.dart';
 import 'package:emotic/components/related.dart';
+import 'package:emotic/components/viewall.dart';
 import 'package:emotic/const/color.dart';
 import 'package:emotic/const/nav_bar.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +49,7 @@ class _ReportState extends State<Report> {
               primary: false,
               padding: const EdgeInsets.all(15),
               crossAxisCount: 2,
-              childAspectRatio: 1.5,
+              childAspectRatio: 1.0,
               mainAxisSpacing: 1.0,
               crossAxisSpacing: 1.0,
               shrinkWrap: true,
@@ -58,6 +60,7 @@ class _ReportState extends State<Report> {
                 Related(),
               ], //Cards()
             ),
+            Viewall(),
           ],
         ),
       ),
@@ -89,8 +92,11 @@ class _BoxState extends State<Box> {
             border: Border.all(width: 3, color: Colors.black),
             borderRadius: BorderRadius.all(Radius.circular(50)),
           ),
-          child: Text(
+          child: AutoSizeText(
             widget.textName,
+            maxLines: 3,
+            maxFontSize: 20,
+            minFontSize: 1,
             style: TextStyle(fontSize: 20.0),
           ),
         ),
