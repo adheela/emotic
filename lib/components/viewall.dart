@@ -13,7 +13,7 @@ class Viewall extends StatefulWidget {
 class _ViewallState extends State<Viewall> {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width/2.25;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: Container(
@@ -85,7 +85,7 @@ class _ExpandableListViewState extends State<ExpandableListView> {
               itemBuilder: (BuildContext context, int index) {
                 return Tweet(user: "Adheela", userHandle: "@adhee22", text: "In this course we will go over the basics of using Flutter Web for website development. Topics will include Responsive Layout, Deploying, Font Changes, Hover Functionality, Modals and more.",);
               },
-              itemCount: 15,
+              //itemCount: 15,
             )),
       ],
     );
@@ -97,6 +97,7 @@ class ExpandableContainer extends StatelessWidget {
   final double collapsedHeight;
   final double expandedHeight;
   final Widget child;
+  
 
   ExpandableContainer({
     required this.child,
@@ -107,7 +108,8 @@ class ExpandableContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width/2.25;
+     double screenWidth = MediaQuery.of(context).size.width;
+
     return new AnimatedContainer(
       duration: new Duration(milliseconds: 500),
       curve: Curves.easeInOut,

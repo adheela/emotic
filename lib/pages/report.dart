@@ -45,13 +45,11 @@ class _ReportState extends State<Report> {
                 ],
               ),
             ),
-            GridView.count(
+            GridView.extent(
               primary: false,
               padding: const EdgeInsets.all(15),
-              crossAxisCount: 2,
-              childAspectRatio: 1.0,
-              mainAxisSpacing: 1.0,
-              crossAxisSpacing: 1.0,
+              maxCrossAxisExtent: 800.0,
+              scrollDirection: Axis.vertical,
               shrinkWrap: true,
               children: [
                 Predominant(),
